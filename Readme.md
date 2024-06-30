@@ -20,19 +20,19 @@ kubectl apply -f mysql-statefulset.yaml
 
 Les services déployés
 Le service mysql est déployé
-images/![alt text](image3.png)
+![alt text](images/image3.png)
 
 Le statefulset mysql déploiement : nous aurons 3 replicas mysql 
-images/![alt text](image5.png)
+![alt text](images/image5.png)
 
 Les pods sont démarrés
-![alt text](image4.png)
+![alt text](images/image4.png)
 
 Pour accéder à ces instances mysql il suffit de lancer les commandes suivantes:
 récupérer le nom du pods mysql et lancer cette commande
 
 kubectl exec -it mysql-0 -- sh
-![alt text](image6.png)
+![alt text](images/image6.png)
 
 Vous pouvez exécuter les commandes sql classiques pour manipuler la base.
 Pour sortir de la fenêtre tapper exit.
@@ -41,7 +41,7 @@ Pour les autres pods de la même manière nous pouvons vérifier l'accessibilit�
 
 # Si le déployement msql ne fonctionne pas, lancer cette commande avec le nom du pvc pour voir le message d'erreur
 kubectl get pvc
-images/![alt text](image7.png)
+![alt text](images/image7.png)
 
 kubectl describe pvc mysql-persistent-storage-mysql-0
 
@@ -54,18 +54,18 @@ kubectl apply -f wordpress-deployment.yaml
 
 # Vérifier les services déployés
 kubectl get service
-images/![alt text](image1.png)
+![alt text](images/image1.png)
 
 # Lancement du service wordpress sans l'ingress
 vous pouvez lancer cette commande
 
 minikube service wordpress
 
-images/![alt text](image8.png)
+![alt text](images/image8.png)
 
 Le navigateur sera lancé sinon copier l'url affichée dans un navigateur
 
-images/![alt text](image9.png)
+![alt text](images/image9.png)
 
 Ctl+C ==> pour arrêtre le service
 
@@ -75,7 +75,7 @@ kubectl port-forward svc/wordpress 8888:80
 
 l'interface wordpress est disponible à l'adresse : 127.0.0.1:8888
 
-images/![alt text](image10.png)
+![alt text](images/image10.png)
 
 Ctl+C ==> pour arrêtre le service
 
@@ -102,7 +102,7 @@ minikube addons enable ingress
 # Afficher les ingress
 kubectl get ingress
 
-images/![alt text](image11.png)
+![alt text](images/image11.png)
 
 
 # Lancer la commande suivante sur un terminale pour mettre l'ingress à disposition et donner l'accès au site wordpress (service wordpress) dans un navigateur
@@ -114,4 +114,4 @@ Vérifier sur un navigateur
 
 http://localhost/site.wordpress
 
- ![alt text](image.png)
+ ![alt text](images/image.png)
