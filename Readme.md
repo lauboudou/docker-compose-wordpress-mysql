@@ -99,16 +99,11 @@ Dans le fichier hostname j'ai une configuration wordpress-ingress avec un nom de
 
 192.168.49.2  et le port d'écoute 80
 
-----------------------------------------------------------------------------------------
-NAME              CLASS   HOSTS                     ADDRESS        PORTS   AGE
-wordpress-ingress   nginx   site.wordpress            192.168.49.2   80    73s
-----------------------------------------------------------------------------------------
+Ajouter cette ligne dans le fichier 'C:\Windows\System32\drivers\etc\hosts' 
+site.wordpress            192.168.49.2   80    73s
 
 # Déployer l'ingress
 kubectl apply -f wordpress-ingress.yaml
-
-Pour Ingress de wordpress-mysql, le site sera accessible via cette configuration
-127.0.0.1 site.wordpress
 
 # Exécuter la commande suivantes
 minikube addons enable ingress
@@ -120,6 +115,7 @@ kubectl get ingress
 
 
 Lancer la commande suivante sur un terminale pour mettre l'ingress à disposition et donner l'accès au site wordpress (service wordpress) dans un navigateur
+
 minikube tunnel
 
 === Voici le site
@@ -128,4 +124,3 @@ Vérifier sur un navigateur
 
 http://localhost/site.wordpress
 
- ![alt text](images/image.png)
