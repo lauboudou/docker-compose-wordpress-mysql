@@ -95,12 +95,12 @@ Ctl+C ==> pour arrêtre le service
 # Deployer wordpress-ingress.yaml et activer le ingress controller
 dans un premier préparer la configuration suivante
 
-Dans le fichier hostname j'ai une configuration wordpress-ingress avec un nom de host site.wordpress et @IP du minikube
+Dans le fichier hostname j'ai une configuration wordpress-ingress avec un nom de host site.wordpress et @IP du minikube ==> sur le PC windows l'@IP à configurer est 127.0.0.1 (localhost)
 
-192.168.49.2  et le port d'écoute 80
+127.0.0.1 et le port d'écoute 80
 
 Ajouter cette ligne dans le fichier 'C:\Windows\System32\drivers\etc\hosts' 
-site.wordpress            192.168.49.2   80    73s
+127.0.0.1 site.wordpress
 
 # Déployer l'ingress
 kubectl apply -f wordpress-ingress.yaml
@@ -119,8 +119,10 @@ Lancer la commande suivante sur un terminale pour mettre l'ingress à dispositio
 minikube tunnel
 
 === Voici le site
-=====================================================
-Vérifier sur un navigateur
+==============================================================================================
+Vérifier sur un navigateur l'accessibilité à l'interface wordpress via le nom du site
+configurer dans le fichier hosts
 
-http://localhost/site.wordpress
+/site.wordpress
 
+![alt text](images/image12.png)
