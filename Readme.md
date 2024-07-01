@@ -92,7 +92,7 @@ l'interface wordpress est disponible à l'adresse : 127.0.0.1:8888
 
 Ctl+C ==> pour arrêtre le service
 
-# Deployer wordpress-ingress.yaml et activer le ingress controller
+# Deployer wordpress-ingress.yaml et activer l'ingress controller
 dans un premier préparer la configuration suivante
 
 Dans le fichier hostname j'ai une configuration wordpress-ingress avec un nom de host site.wordpress et @IP du minikube ==> sur le PC windows l'@IP à configurer est 127.0.0.1 (localhost)
