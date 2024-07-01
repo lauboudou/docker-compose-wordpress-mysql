@@ -1,7 +1,7 @@
 # Ce projet déploit 
 •	Pour une Agence web: 1 application Stateful avec trois réplicas
-o	WordPress
-o	bases de données mysql
+	- WordPress
+	- bases de données mysql
 
 => Une foirs les déploiements terminés un service ingress 'wordpress-ingress' sera lancé pour accéder à l'interface wordpress
 
