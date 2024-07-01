@@ -5,7 +5,7 @@ o	bases de données mysql
 
 => Une foirs les déploiements terminés un service ingress 'wordpress-ingress' sera lancé pour accéder à l'interface wordpress
 
-# Démarrer minikube si ce n'est la cas
+# Démarrer minikube si ce n'est pas la cas
 
 minikube start
 
