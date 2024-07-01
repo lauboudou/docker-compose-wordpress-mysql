@@ -22,6 +22,7 @@ kubectl apply -f mysql-statefulset.yaml
 # Vérifier que les base sont bien déployées et accessibles via la ligne des commandes
 
 Les services déployés
+
 Le service mysql est déployé
 
 ![alt text](images/image3.png)
