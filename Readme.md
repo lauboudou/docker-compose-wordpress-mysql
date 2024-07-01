@@ -118,7 +118,7 @@ Lancer la commande suivante sur un terminale pour mettre l'ingress à dispositio
 
 minikube tunnel
 
-=== Voici le site
+=== Voici le site  ===
 ==============================================================================================
 Vérifier sur un navigateur l'accessibilité à l'interface wordpress via le nom du site
 configurer dans le fichier hosts
